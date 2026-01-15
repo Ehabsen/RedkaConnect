@@ -115,6 +115,12 @@ Please include:
 
 Get the latest Windows installer from [Releases](https://github.com/Ehabsen/RedkaConnect/releases)
 
+## Credits
+
+**RedkaConnect** is based on [Input Leap](https://github.com/input-leap/input-leap), a fork of the original Barrier project. We extend our gratitude to the Input Leap community and contributors for their excellent work in creating reliable cross-platform keyboard and mouse sharing software.
+
+This project builds upon their foundation with Windows-specific enhancements and USB cable support.
+
 
 ## FAQ
 
