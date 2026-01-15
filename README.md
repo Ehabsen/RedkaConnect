@@ -1,140 +1,146 @@
-# Input Leap
+# RedkaConnect
 
 <!-- add badges: flatpak, snap, GitHub Actions -->
 
-### Contact info:
+**Seamless keyboard and mouse sharing for Windows computers**
 
-- `#inputleap` on LiberaChat IRC network, for support with Input Leap.
-- `#inputleap-dev` on LiberaChat IRC network, for discussing development of Input Leap.
+### What is RedkaConnect?
 
-### What is it?
+RedkaConnect is modern software that lets you control multiple Windows computers with a single keyboard and mouse. Just like a KVM switch, but in software - move your mouse to the edge of the screen to switch between computers.
 
-Input Leap is software that mimics the functionality of a KVM switch, which
-historically would allow you to use a single keyboard and mouse to control
-multiple computers by physically turning a dial on the box to switch the machine
-you're controlling at any given moment. Input Leap does this in software, allowing
-you to tell it which machine to control by moving your mouse to the edge of the
-screen, or by using a keypress to switch focus to a different system.
+**Key Features:**
+- 🖥️ **Network sharing** - Control computers across your local network
+- 🔌 **USB cable support** - Direct cable connection (no network required)
+- 📱 **QR code pairing** - Easy setup with phone camera
+- 📋 **Clipboard sharing** - Copy and paste between computers
+- 🪟 **Windows optimized** - Built specifically for Windows 10/11
 
-At the moment, Input Leap is not compatible with Synergy.
+### Why RedkaConnect?
 
-Input Leap needs to be installed on all machines that will share keyboard and
-mouse.
+**Simple & Reliable**
+- Built for Windows users who want hassle-free computer control
+- No complex network setup required
+- Works out-of-the-box with modern Windows computers
 
-### What's different?
+**Flexible Connections**
+- **Network mode**: Share across your local network (WiFi or Ethernet)
+- **USB mode**: Direct cable connection for maximum security and speed
+- **QR pairing**: Scan codes with your phone for instant setup
 
-Whereas Synergy has moved beyond its goals from the 1.x era, Input Leap aims to
-maintain that simplicity. Input Leap will let you use your keyboard and mouse
-from one computer to control one or more other computers.
+**Modern Interface**
+- Clean, intuitive design with familiar computer/cable metaphors
+- Visual status indicators show connection state at a glance
+- Error messages you can actually understand
 
-Clipboard sharing is supported (**Note:** Not currently supported on Linux/Wayland).
+## Quick Start
 
-That's it.
+### Option 1: Network Connection (Recommended)
 
-### Project goals
+1. **On the main computer** (the one with your keyboard/mouse):
+   - Launch RedkaConnect
+   - Click **"📤 Share This Computer"**
+   - Note the 6-digit PIN code displayed
 
-Hassle-free reliability. We are users, too. Input Leap was created so that we could
-solve the issues we had with Synergy and then share these fixes with other
-users.
+2. **On the second computer**:
+   - Launch RedkaConnect
+   - Click **"📥 Connect to Computer"**
+   - Enter the PIN from step 1
+   - Click Connect
 
-Compatibility. We use more than one operating system and you probably do, too.
-Windows, macOS, Linux, FreeBSD... Input Leap should "just work".
+3. **Done!** Move your mouse to the edge of the screen to switch computers
 
-Communication. Everything we do is in the open. Our issue tracker will let you
-see if others are having the same problem you're having and will allow you to
-add additional information. You will also be able to see when progress is made
-and how the issue gets resolved.
+### Option 2: USB Cable Connection
 
-### Usage
+1. **Get a USB cable**:
+   - USB A-to-A cable (for older computers)
+   - USB A-to-C or C-to-C adapters (for modern computers)
+   - *Note: Not all USB cables work for computer-to-computer connections*
 
-1. Install and run Input Leap on each machine that will be sharing.
-2. On the machine with the keyboard and mouse, make it the server.
-3. Click the "Configure server" button and drag a new screen onto the grid for
-    each client machine.
-4. Ensure the "screen name" matches exactly (case-sensitive) for each configured
-    screen -- the clients' Input Leap windows will tell you their screen names
-    (just above the server IP).
-5. On the client(s), put in the server machine's IP address (or use Bonjour/auto
-    configuration when prompted) and "start" them.
+2. **On the main computer**:
+   - Launch RedkaConnect
+   - Click **"📤 Share This Computer"**
 
-You should see `Input Leap is running` on both server and clients.
+3. **On the second computer**:
+   - Launch RedkaConnect
+   - Click **"🔌 Connect via USB Cable"**
+   - Connect the USB cable between computers
+   - Select the detected USB device and click Connect
 
-You should now be able to move the mouse between all the screens as if they were
-the same machine.
+4. **Done!** Instant connection with no network setup required
 
-Note that if the keyboard's Scroll Lock is active then this will prevent the
-mouse from switching screens.
+### Visual Status Guide
 
-To find information about configuring Input Leap look at the
-[wiki](https://github.com/input-leap/input-leap/wiki)
+- 🖥️ 🔗 **Ready** - Everything is set up correctly
+- 🖥️ ⏳ **Sharing** - Waiting for someone to connect
+- 🖥️ 🔄 **Connecting** - Establishing connection
+- 🖥️ 🔗 **Connected** - Successfully linked!
+- 🔌❌ **Cable Error** - Check your connection and try "Plug Back In"
 
-### Contact & support
+## System Requirements
 
-Please be aware that the *only* way to draw our attention to a bug is to create
-a new issue in [the issue tracker](https://github.com/input-leap/input-leap/issues).
+- **Windows 10 or 11** (64-bit only)
+- **USB ports** for cable connections (optional)
+- **Network connection** for network sharing (optional)
 
-Always follow the template, it's there for a reason. Failure to do so will
-inevitably result in a delay in the issue being fixed!
+## Troubleshooting
 
-Please also see the IRC channels at the top of the README for other methods of
-support.
+### Network Connection Issues
+- Make sure both computers are on the same network
+- Check Windows Firewall settings
+- Try temporarily disabling antivirus software
+- Ensure the PIN hasn't expired (valid for 5 minutes)
 
-### Contributions
+### USB Connection Issues
+- Use a proper USB A-to-A cable (not just any USB cable)
+- Try different USB ports on both computers
+- Make sure the sharing computer is running first
+- Check Device Manager for USB errors
 
-At this time we are looking for developers to help fix the issues found in the
-issue tracker.
+### General Problems
+- 🔌❌ **"Connection Lost"** → Click "Plug Back In" or restart both computers
+- 🖥️ 🔄 **Stuck connecting** → Close and restart RedkaConnect on both computers
+- Scroll Lock prevents mouse switching → Turn off Scroll Lock
 
-Submit pull requests once you've polished up your patch and we'll review and
-possibly merge it.
+## Support
 
-Most pull requests will need to include a release note.
+Found a bug or need help? [Create an issue](https://github.com/Ehabsen/RedkaConnect/issues) on GitHub.
 
-See `doc/newsfragments/README.md` for documentation of how to do that.
+Please include:
+- Windows version
+- Connection method (Network/USB)
+- Steps to reproduce the problem
+- What you expected to happen vs. what actually happened
 
-## Distro specific packages
+## Downloads
 
-While not a comprehensive list, [repology](https://repology.org/project/input-leap/versions) provides a decent list of distro
-specific packages.
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/input-leap.svg)](https://repology.org/project/input-leap/versions)
-
-<!-- TODO: Move the FAQ to the wiki, link here. Keep the README short and simple. -->
-
-## FAQ - Frequently Asked Questions
-
-**Q: Input Leap vs. barrier?**
-
-> A: Input Leap is a fork of barrier, by **barrier's active maintainers**. See [issue #1414](https://github.com/input-leap/input-leap/issues/1414)
->    for more details. Currently, barrier is considered unmaintained.
-
-**Q: Does drag and drop work on linux?**
-
-> A: No *(see [#855](https://github.com/input-leap/input-leap/issues/855) if you'd like to change that)*
-
-**Q: What OSes are supported?**
-
-> A: The [most recent release](https://github.com/input-leap/input-leap/releases/latest) of Input Leap is known to work on:
->  - Windows 10, and 11
->  - macOS *(previously known as OS X or Mac OS X)*
->    - 10.12 and newer
->  - Linux
->  - FreeBSD
->  - OpenBSD
-
-**Q: Are 32-bit versions of Windows supported?**
-
-> A: No
-
-__Q: Is it possible to use Input Leap on Mac OS X / OS X versions prior to 10.12?__
-
-> A: No
-
-**Q: How do I load my configuration on startup?**
-
-> A: Start the binary with the argument `--config <path_to_saved_configuration>`
+Get the latest Windows installer from [Releases](https://github.com/Ehabsen/RedkaConnect/releases)
 
 
-**Q: After loading my configuration on the client the field 'Server IP' is still empty!**
+## FAQ
+
+**Q: What's the difference between Network and USB connections?**
+
+> **Network**: Works over WiFi/Ethernet, requires both computers on same network, easier for multiple computers
+> **USB**: Direct cable connection, ultra-fast and secure, no network setup needed, works offline
+
+**Q: What USB cable do I need?**
+
+> For computer-to-computer connections, you need a special USB cable. Regular charging cables usually won't work. Look for "USB data transfer cable" or "USB A to A cable" on Amazon/eBay.
+
+**Q: Can I connect more than 2 computers?**
+
+> Yes! One computer runs in "Share" mode, and multiple others can connect via network. USB connections are currently limited to 2 computers.
+
+**Q: Is my connection secure?**
+
+> Both network and USB connections are encrypted. USB connections are physically secure (someone needs physical access to both computers).
+
+**Q: Why does the connection drop sometimes?**
+
+> Network: Check WiFi signal, try Ethernet cable, or use USB mode
+> USB: Try different USB ports, ensure cable is properly seated, check for USB power management issues
+
+
 
 > A: Edit your configuration to include the server's ip address manually with
 >
@@ -145,12 +151,6 @@ __Q: Is it possible to use Input Leap on Mac OS X / OS X versions prior to 10.12
 >    serverhostname=<AAA.BBB.CCC.DDD>
 >```
 
-**Q: Are there any other significant limitations with the current version of Input Leap?**
+**Q: Does it work with different screen resolutions?**
 
-> A: Currently:
->    - Input Leap currently has limited UTF-8 support; issues have been reported with processing various languages.
->      - *(see [#860](https://github.com/input-leap/input-leap/issues/860))*
->    - Clipboard sharing is not currently supported on Linux/Wayland.
->    - AltGr key combinations when Server is linux and client is Windows don't usually work out of the box. See [#100](https://github.com/input-leap/input-leap/issues/100) for a workaround
->
-> The complete list of open issues can be found in the ['Issues' tab on GitHub](https://github.com/input-leap/input-leap/issues?q=is%3Aissue+is%3Aopen). Help is always appreciated.
+> Yes! RedkaConnect automatically handles different screen sizes and resolutions seamlessly.
